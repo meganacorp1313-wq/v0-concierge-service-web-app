@@ -1,17 +1,17 @@
-import { Shield, MapPin, Heart, Clock } from "lucide-react"
+import { Shield, MapPin, Heart, MessageCircle } from "lucide-react"
 
 const reasons = [
   {
     icon: Shield,
-    title: "Trusted & Reliable",
+    title: "Trusted & Discreet",
     description:
-      "Years of experience serving discerning guests with impeccable attention to detail and the highest standards of service.",
+      "Years of experience serving discerning guests with impeccable attention to detail and complete discretion.",
   },
   {
     icon: MapPin,
     title: "Local Expertise",
     description:
-      "Deep knowledge of Casa de Campo and the surrounding area. We know the best-kept secrets and have the connections to make them accessible.",
+      "Deep knowledge of Casa de Campo and La Romana. We know the best-kept secrets and have the connections to make them accessible.",
   },
   {
     icon: Heart,
@@ -20,10 +20,10 @@ const reasons = [
       "Every guest is unique. We tailor our services to your specific needs, preferences, and schedule to create your perfect experience.",
   },
   {
-    icon: Clock,
-    title: "Available When You Need Us",
+    icon: MessageCircle,
+    title: "Fast WhatsApp Response",
     description:
-      "From pre-arrival planning to last-minute requests during your stay, our team is always ready to assist you.",
+      "Reach us instantly via WhatsApp for pre-arrival planning or last-minute requests. We respond quickly to keep your stay seamless.",
   },
 ]
 

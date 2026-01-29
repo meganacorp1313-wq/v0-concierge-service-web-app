@@ -138,7 +138,7 @@ export function ContactForm() {
               />
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6">
               <div>
                 <label
                   htmlFor="arrivalDate"
@@ -165,6 +165,22 @@ export function ContactForm() {
                   id="departureDate"
                   name="departureDate"
                   className="w-full px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-sm text-primary-foreground focus:outline-none focus:border-primary-foreground/40 transition-colors"
+                />
+              </div>
+              <div>
+                <label
+                  htmlFor="guests"
+                  className="block text-sm text-primary-foreground/60 mb-2"
+                >
+                  Number of Guests
+                </label>
+                <input
+                  type="number"
+                  id="guests"
+                  name="guests"
+                  min="1"
+                  placeholder="e.g. 4"
+                  className="w-full px-4 py-3 bg-primary-foreground/10 border border-primary-foreground/20 rounded-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:border-primary-foreground/40 transition-colors"
                 />
               </div>
             </div>
