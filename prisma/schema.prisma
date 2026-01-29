@@ -1,0 +1,87 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  CUSTOMER
+}
+
+enum RequestStatus {
+  NEW
+  IN_PROGRESS
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+enum Language {
+  EN
+  ES
+  RU
+}
+
+enum ContactPreference {
+  WHATSAPP
+  EMAIL
+}
+
+model User {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  name           String?
+  password       String
+  phone          String?
+  language       Language  @default(EN)
+  role           Role      @default(CUSTOMER)
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  requests       Request[]
+  messages       Message[]
+}
+
+model Request {
+  id                String          @id @default(cuid())
+  userId            String
+  user              User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  arrivalDate       DateTime
+  departureDate     DateTime
+  adults            Int             @default(1)
+  kids              Int             @default(0)
+  infants           Int             @default(0)
+  villaName         String?
+  services          String[]        // Array of service names
+  notes             String?
+  contactPreference ContactPreference @default(WHATSAPP)
+  status            RequestStatus   @default(NEW)
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
+  messages          Message[]
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  content   String
+  requestId String
+  request   Request  @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  message   String
+  createdAt DateTime @default(now())
+}
