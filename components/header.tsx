@@ -12,7 +12,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="font-serif text-2xl tracking-tight">
-            Aureum
+            Casa Concierge
           </Link>
 
           <nav className="hidden md:flex items-center gap-10">
@@ -41,7 +41,7 @@ export function Header() {
               href="#contact"
               className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors rounded-sm"
             >
-              Book a Consultation
+              Get in Touch
             </Link>
           </div>
 
@@ -84,7 +84,7 @@ export function Header() {
               className="inline-flex items-center justify-center px-6 py-3 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors rounded-sm mt-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Book a Consultation
+              Get in Touch
             </Link>
           </nav>
         </div>

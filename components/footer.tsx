@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { MessageCircle } from "lucide-react"
 
 export function Footer() {
   return (
@@ -7,12 +8,21 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="font-serif text-2xl tracking-tight">
-              Aureum
+              Casa Concierge
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              Exceptional service, effortless luxury. Making the extraordinary accessible 
-              to the world&apos;s most discerning individuals.
+              Premium concierge services in Casa de Campo and La Romana. 
+              Making your Dominican Republic experience unforgettable.
             </p>
+            <a
+              href="https://wa.me/18095551234"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 text-sm text-accent hover:text-accent/80 transition-colors"
+            >
+              <MessageCircle className="h-4 w-4" />
+              WhatsApp Us
+            </a>
           </div>
 
           <div>
@@ -20,49 +30,49 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
                 <Link href="#services" className="hover:text-foreground transition-colors">
-                  Private Aviation
+                  Villa Concierge
                 </Link>
               </li>
               <li>
                 <Link href="#services" className="hover:text-foreground transition-colors">
-                  Luxury Accommodations
+                  Airport Transfers
                 </Link>
               </li>
               <li>
                 <Link href="#services" className="hover:text-foreground transition-colors">
-                  Exclusive Events
+                  Private Chef
                 </Link>
               </li>
               <li>
                 <Link href="#services" className="hover:text-foreground transition-colors">
-                  Personal Shopping
+                  Golf Tee Times
+                </Link>
+              </li>
+              <li>
+                <Link href="#services" className="hover:text-foreground transition-colors">
+                  Restaurant Reservations
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-sm font-medium tracking-wide mb-4">Company</p>
+            <p className="text-sm font-medium tracking-wide mb-4">Contact</p>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>
-                <Link href="#about" className="hover:text-foreground transition-colors">
-                  About Us
-                </Link>
+                <a href="mailto:hello@casaconcierge.com" className="hover:text-foreground transition-colors">
+                  hello@casaconcierge.com
+                </a>
               </li>
               <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
-                  Membership
-                </Link>
+                <a href="tel:+18095551234" className="hover:text-foreground transition-colors">
+                  +1 (809) 555-1234
+                </a>
               </li>
-              <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="#contact" className="hover:text-foreground transition-colors">
-                  Contact
-                </Link>
+              <li className="pt-2">
+                Casa de Campo<br />
+                La Romana<br />
+                Dominican Republic
               </li>
             </ul>
           </div>
@@ -80,38 +90,27 @@ export function Footer() {
                   Terms of Service
                 </Link>
               </li>
-              <li>
-                <Link href="#" className="hover:text-foreground transition-colors">
-                  Cookie Policy
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Aureum Concierge. All rights reserved.
+            &copy; {new Date().getFullYear()} Casa Concierge. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link
+            <a
               href="#"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               Instagram
-            </Link>
-            <Link
+            </a>
+            <a
               href="#"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              LinkedIn
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Twitter
-            </Link>
+              Facebook
+            </a>
           </div>
         </div>
       </div>

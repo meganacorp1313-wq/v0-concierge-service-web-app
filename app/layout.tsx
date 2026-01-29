@@ -13,9 +13,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Aureum Concierge | Luxury Personal Services",
+  title: "Casa Concierge | Luxury Concierge Services in Dominican Republic",
   description:
-    "Experience unparalleled luxury with Aureum Concierge. From private jet charters to exclusive event access, we curate extraordinary experiences for discerning clients worldwide.",
+    "Premium concierge services in Casa de Campo and La Romana, Dominican Republic. Villa management, private chefs, airport transfers, golf reservations, and personalized experiences for discerning guests.",
 }
 
 export const viewport: Viewport = {
